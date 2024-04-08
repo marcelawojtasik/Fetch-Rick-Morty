@@ -1,0 +1,87 @@
+  @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #2b2b2b;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    height: 30vh;
+    background-image: url('/cover.jpg');
+    background-size:cover;
+    background-position: center;
+  }
+
+  header .main-title {
+    font-family: 'Patrick Hand', cursive;
+    color: snow;
+    font-size: 5rem;
+    text-align: left;
+  }
+
+  #characters {
+    padding: 4rem;
+    display: flex; 
+    flex-wrap: wrap; /*Para que si no entran a lo largo vayan yendo para abajo, lo hace responsive*/
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .character{
+    padding: 1rem;
+    background-color: #2d2d2d;
+    color: snow;
+  }
+
+  .character div p:last-of-type {
+    /*Para que al ultimo parrafo de cada tarjeta le aplique el estilo que defino*/
+    display: flex; /*queda el boton con el estado al lado*/
+    align-items: center; /*Quedan alineados*/
+    gap: 1rem;
+  }
+
+  /*Clases x el estado del character*/
+  .alive{
+    display: block; /*se lo debo agregar xq el span es x defecto inline*/
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+  }
+
+  .dead{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: crimson;
+    border-radius: 50%;
+  }
+  
+  .unknown {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+
+  footer{
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background-color: #263546;
+    color: snow;
+  }
